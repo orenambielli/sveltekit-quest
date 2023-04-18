@@ -1,69 +1,34 @@
 <script>
-    import { onMount, onDestroy } from 'svelte';
-    import { page } from '$app/stores';
-    
-    let currentPage = '';
-    let currentTime = new Date();
+    import DropdownMenu from '../lib/DropdownMenu.svelte';
+    import Clock from '../lib/Clock.svelte';
 
-    function updateTime() {
-      currentTime = new Date();
-    }
+    const menuItems = [
+        { label: 'File', items: [
+            { label: 'New', link: 'https://www.google.com' },
+            { label: 'Save', link: 'https://www.mozilla.org' },
+            { label: 'Exit', link: 'https://www.bing.com' }
+        ]},
+        { label: 'About', items: [
+            { label: 'More...', link: 'https://www.ai.com' }
+        ]}
+    ];
+</script>
 
-    const invalId = setInterval(updateTime, 1000);
-    
-    const unsubscribe = page.subscribe(value => {
-      currentPage = value.path;
-    });
+<nav>
+    <div class="menu">
+      <DropdownMenu {menuItems} />
+    </div>
+    <div>
+      <Clock />  
+    </div>
+</nav>
 
-    onMount(() => {
-      invalId;
-    });
-    
-    onDestroy(() => {
-      unsubscribe();
-    });
+<style>
 
-  </script>
-  
-  <nav class="navbar">
-      <div class="navbar-left">
-        <a href="/" class:active={currentPage === '/'}>Home</a>
-        <a href="/about" class:active={currentPage === '/about'}>About</a>
-        <a href="/contact" class:active={currentPage === '/contact'}>Contact</a>
-      </div>
-      <div class="navbar-right">
-        <span class="time">{currentTime.toLocaleTimeString()}</span>
-      </div>
-  </nav>
-  
-  <style>
-    
-    .navbar {
+    nav {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      background-color: #000;
-      color: #fff;
-      font-family: 'Silkscreen', monospace;
-      font-size: 1rem;
-      text-transform: uppercase;
+      max-width: 800px;
     }
-    
-    .navbar-left {
-      display: flex;
-      align-items: center;
-    }
-    
-    .navbar-left a {
-      color: #fff;
-      text-decoration: none;
-      margin-right: 1rem;
-    }
-    
-    .navbar-left a.active {
-      color: #0f0;
-      text-decoration: underline;
-    }
-    
-  </style>
-  
+
+</style>
