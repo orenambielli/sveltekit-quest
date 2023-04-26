@@ -34,13 +34,11 @@
 </div>
 
 <style>
-
   .clock {
       position: relative;
       color: #000;
-      font-size: 1rem;
-      padding: .25rem;
+      font-size: 1.1rem;
+      margin: .2rem 1rem;
       z-index: 1;
   }
-
 </style>

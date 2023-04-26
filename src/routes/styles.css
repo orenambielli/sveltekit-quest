@@ -84,47 +84,7 @@ a {
     max-width: 25rem;
     margin: .5rem;
 }
-  
-  .popup-1 {
-	display: block;
-	position: absolute;
-	margin: 13% 8%;
-  }
-  
-  .popup-0 {
-	display: block;
-	position: absolute;
-	margin: 25% 40%;
-  }
-  
-  .popup-2 {
-	display: block;
-	position: absolute;
-	margin: 11% 11%;
-  }
-  
-  #sad-face {
-	position:absolute;
-	font-size:8rem;
-	z-index:-1;
-  }
-  
-  
-  /*
-  .cursor-text::after {
-	content: " ";
-	margin: .15rem .5rem;
-	display: inline-block;
-	background-color: #fff;
-	vertical-align: top;
-	width: 10px;
-	height: 1rem;
-	animation: cursor 1s step-end infinite;
-  }
-  
-  @keyframes cursor {
-	0% { opacity: 1.0; }
-	50% { opacity: 0.0; }
-	100% { opacity: 1.0; }
-  }
-  */
+
+.toggle-dark {
+	filter: invert(1);
+}

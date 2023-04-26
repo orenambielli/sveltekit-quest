@@ -1,16 +1,16 @@
 <script>
-    import DropdownMenu from '../lib/DropdownMenu.svelte';
-    import Clock from '../lib/Clock.svelte';
+    import DropdownMenu from './DropdownMenu.svelte';
+    import Clock from './Clock.svelte';
 
     const menuItems = [
-        { label: 'File', items: [
-            { label: 'New', link: 'https://www.google.com' },
-            { label: 'Save', link: 'https://www.mozilla.org' },
-            { label: 'Exit', link: 'https://www.bing.com' }
-        ]},
-        { label: 'About', items: [
-            { label: 'More...', link: 'https://www.ai.com' }
-        ]}
+      { label: 'File', items: [
+          { label: 'New', link: 'https://www.google.com' },
+          { label: 'Save', link: 'https://www.mozilla.org' },
+          { label: 'Exit', link: 'https://www.bing.com' }
+      ]},
+      { label: 'About', items: [
+          { label: 'More...', link: 'https://www.ai.com' }
+      ]}
     ];
 </script>
 

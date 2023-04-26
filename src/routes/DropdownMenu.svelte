@@ -33,6 +33,7 @@
   </script>
   
   <div class="navbar">
+	<img src="/images/icons/sleepy-off.png" style="height: 16px; width: 16px; margin: .5rem 1rem 0 2rem" alt="sleepy" />
 	{#each menuItems as item}
 	  <div class="dropdown">
 		<button class="button" on:click={toggleDropdown}>{item.label}</button>
@@ -49,10 +50,10 @@
   <style>
 
 	.navbar {
-		display: inline-block;
+		display: inline-flex;
 		position: absolute;
 		background-color: #fff;
-		height: 2rem;
+		height: 30px;
 		width: 100%;
 		max-width: 800px;
 	}
@@ -61,6 +62,7 @@
 		display: inline-block;
 		position: relative;
 		height: 100%;
+		min-width: 3rem;
 	}
   
 	.dropdown-content {
@@ -94,7 +96,8 @@
 		font-size: 1rem;
 		color: #000;
 		text-decoration: none;
-		padding: 1rem;
+		padding: .5rem;
+		min-width: 5rem;
 	}
   
 	.link:hover {
