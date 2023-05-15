@@ -1,10 +1,9 @@
 <script>
-    export let title = "Games";
-    export let icon = "../images/icons/dnd-icon.png";
-    export let alt = "accept.oren.quest";
-    export let content = "https://accept.oren.quest";
+  export let isVisible = false;
 </script>
-  
-  <div>
-    <!-- Insert your app content here -->
-  </div>
+
+<div class="{isVisible ? 'visible' : 'hidden'}">
+  <h1>{app.title}</h1>
+  <p>Welcome to the home page!</p>
+  <button on:click={() => (isVisible = false)}>Close</button>
+</div>

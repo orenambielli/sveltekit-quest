@@ -30,6 +30,15 @@
 		}
 	  });
 	});
+
+
+	function handleKeydown(event) {
+		//play keyframe animation on sleepy
+		// .joel-walk {
+		// background: url(https://i.imgur.com/EA7Q7iN.png) 0 0;
+		// animation: walk 1s steps(6) infinite;
+		// }
+	}
   </script>
   
   <div class="navbar">

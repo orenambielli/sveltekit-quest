@@ -4,7 +4,7 @@
 </svelte:head>
 
 <script>
-  import MainWindow from './MainWindow.svelte';
+  import Explorer from './Explorer.svelte';
 </script>
 
-<MainWindow />
+<Explorer />

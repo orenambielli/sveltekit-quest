@@ -1,10 +1,12 @@
 <script>
-    export let title = "Void";
-    export let icon = "../images/icons/afterdark-icon.png";
-    export let alt = "v o i d";
-    export let content = "https://oren.quest";
+  export const app = {
+      title: 'V o i d',
+      icon: '../images/icons/afterdark-icon.png',
+      alt: 'void icon'
+    };
 </script>
-
-<div>
+  
+  <div>
+    <h1>{title}</h1>
     <img src="images/starfield.gif" style="height: auto; width: 100%;" alt="v o i d" />
-</div>
+  </div>

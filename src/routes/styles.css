@@ -68,6 +68,7 @@ a {
   .row {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 	max-width: 800px;
 	margin-left: auto;
 	margin-right: auto;

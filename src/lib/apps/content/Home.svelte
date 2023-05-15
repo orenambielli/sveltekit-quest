@@ -1,10 +1,12 @@
 <script>
-    export let title = "Home";
-    export let icon = "../images/icons/sys-icon.png";
-    export let alt = "oren.quest";
-    export let content = "https://oren.quest";
+  export let app = {
+    title: 'Home',
+    icon: '../images/icons/sys-icon.png',
+    alt: 'home icon'
+  };
 </script>
-  
-  <div>
-    <!-- Insert your app content here -->
-  </div>
+
+<div>
+  <h1>{app.title}</h1>
+  <p>Welcome to the home page!</p>
+</div>
